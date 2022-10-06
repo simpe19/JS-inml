@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap%27');
+:root {
+    /* färger */
+    --color-theme: #FF7373;
+    --color-theme-light: #EDFCFA;
+    --color-text-dark: #222529;
+    --color-dark: #23262A;
+    --color-white: #ffffff;
+    --color-grey-0: #F7F8FA;
+    --color-grey-1: #E6E6E6;
+    --color-grey-2: #BBBBBB;
+/* fonter */
+    --font-roboto: 'poppins', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-size-14: 1.17rem;
+    --font-size-16: 1.33rem;
+    --font-size-18: 1.5rem;
+    --font-size-20: 1.66rem;
+    --font-size-24: 2rem;
+    --font-size-45: 3.75rem;
+    --font-size-65: 5.41rem;
+/* border */
+    --border-radius-small: 8px;
+    --border-radius-medium: 25px;
+    --border-radius-rounded: 50%;
+}
