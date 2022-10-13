@@ -10,6 +10,7 @@
     --color-grey-0: #F7F8FA;
     --color-grey-1: #E6E6E6;
     --color-grey-2: #BBBBBB;
+    --color-grey-3: #f5f5f5;
 /* fonter */
     --font-poppins: 'poppins', sans-serif;
     --font-weight-regular: 400;
@@ -50,6 +51,39 @@ header {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
 }
+._btn-theme {
+    position: relative;
+    text-align: center;
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    padding: 20px 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0;
+}
+    ._btn-theme:hover {
+        background-color: var(--color-dark);
+        color: #fff;
+    }
+._btn-theme ._btn-theme-right,
+._btn-theme-left {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+
+}
+    ._btn-theme ._btn-theme-left {
+    top: 10px;
+    left: 10px;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    }
+    ._btn-theme ._btn-theme-right {
+        bottom: 10px;
+        right: 10px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        }
     .logo {
         text-decoration: none;
         font-size: var(--font-size-35);
@@ -70,19 +104,25 @@ header {
         display: flex;
         gap: 30px;
     }
-    header ul li {
+    header li {
         list-style: none;
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-medium);
     }
-    header ul li a {
+    header ul a {
         text-decoration: none;
         align-items: center;
         font-size: var(--font-size-16);
         color: var(--color-text-dark);
         font-weight: var(--font-weight-medium);
+        position: relative;
     }
         header ul li a:hover {
             color: var(--color-theme);
             transition: 0.3s;
+        }
+        .bg-theme {
+            background-color: var(--color-theme);
         }
     .icons i {
         text-decoration: none;
@@ -105,6 +145,7 @@ header {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%); 
     width: 100%;
     height: 845px;
+    margin-bottom: 135px;
 }
 .intro .bild-text {
     display: flex;
@@ -115,6 +156,7 @@ header {
 .intro .content {
     text-align: center;
     width: 33%;
+    margin-right: 20px;
 } 
     .intro img {
         
@@ -122,10 +164,38 @@ header {
         height: 845px;
     }
     .intro h1 {
-        font-size: var(--font-size-65);
+        font-size: 65px;
         font-weight: var(--font-weight-extrabold);
+        margin: 0;
+    }
+    .intro h2 {
+        font-size: 65px;
+        font-weight: var(--font-weight-extrabold);
+        margin-bottom: 20px;
     }
     .intro p {
-        font-size: var(--font-size-20);
+        font-size: 20px;
         font-weight: var(--font-weight-regular);
+        margin-bottom: 50px;
+    }
+
+    /* grid cards */
+
+.featured {
+
+}
+
+    .featured .container {
+    max-width: 1110px;
+    }
+
+    .featured .card {
+        border: none;
+    }
+
+    .featured .card img,
+    .featured .card .img {
+        height: 210px;
+        width: 255px;
+        background-color: var(--color-grey-3);
     }
