@@ -189,6 +189,7 @@ header {
 
     .featured .container {
     max-width: 1110px;
+    margin-bottom: 60px;
     }
 
     .featured .card {
@@ -205,23 +206,28 @@ header {
 
 .card .card-body {
     text-align: center;
+    padding: 4px;
 }
     .card .card-body .card-category {
         font-size: 13px;
         font-weight: 500;
         color: var(--color-dark-grey);
+        margin-bottom: 4px;
     }
     .card .card-body .card-title {
         font-size: 16px;
         font-weight: 600;
+        margin-bottom: 4px;
     }
     .card .card-body .card-rating {
     text-align: center;
     color: var(--color-theme);
+    margin-bottom: 4px;
     }
     .card .card-body .card-price {
     font-size: 18px;
     font-weight: 600;
+    margin-bottom: 0;
     }
 .card {
     overflow: hidden;
@@ -271,3 +277,41 @@ header {
     .card .card-menu a {
         text-decoration: none;
     }
+    /* banner */
+
+.banners img {
+width: 633px;
+}
+
+.banners,
+.flashsale {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.flashsale-box {
+    background-color: var(--color-grey-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .flashsale-box h1 {
+        font-family: var(--font-poppins);
+        font-size: var(--font-size-45);
+        font-weight: 600;
+        color: var(--color-white);
+        margin-bottom: 30px;
+    }
+.flashsale .img-card {
+    height: 210px;
+    width: 100%;
+    background-color: var(--color-grey-3);
+    position: relative;
+}
+.flashsale .card {
+    border: none;
+    margin: 0;
+}
