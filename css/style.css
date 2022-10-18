@@ -373,19 +373,29 @@ width: 633px;
     gap: 40px;
 }
     .contact-form form input {
+        width: 100%;
         padding: 18px 20px;
         border: 1px solid #cbcbcb;
     }
-    .contact-form form textarea {   
-        grid-column: 1 / -1;
+    .contact-form form textarea { 
+        width: 100%;
         padding: 18px 20px;
         border: 1px solid #cbcbcb;
         height: 140px;
         resize: none;
     }
-    .contact-form form button {
+    .contact-form .textarea {
+        grid-column: 1 / -1;
+    }
+    .contact-form form .error {
+        border: 1px solid var(--color-theme);
+        color: var(--color-theme);
 
-
+    }
+    .contact-form form .errorMessage {
+        margin-top: 5px;
+        color: var(--color-theme);
+        font-size: 0.8em;
     }
     .btn-tema {
         position: relative;
