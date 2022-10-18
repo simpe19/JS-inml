@@ -1,18 +1,41 @@
-const submitform = (e) => {
-    e.preventDefault()
-    validate(e)
-}
 
+ const checkLength = (element, minlength = 1, message) => {
 
-const validate = (e) => {
+    if(message === undefined)
+        message = `Your ${element.target.id} must have at least ${minlength} characters`
+    
+    if (element.target.value.length < minlength) {
+        document.getElementById(element.target.id).classList.add('error')
+        document.getElementById(`${element.target.id}ErrorMessage`).innerText =message
+    } else {
+        document.getElementById(element.target.id).classList.remove('error')
+        document.getElementById(`${element.target.id}ErrorMessage`).innerText = ""
+    }
+ }
 
-    console.log(e.type)
+ const checkEmail = (element, message) => {
+    if(message === undefined)
+        message = `Your ${element.target.id} must be a valid e-mail adress`
 
-    switch(e.type) {
-        case "submit":
+    if (!element.target.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+        document.getElementById(element.target.id).classList.add('error')
+        document.getElementById(`${element.target.id}ErrorMessage`).innerText = message
+    } else {
+        document.getElementById(element.target.id).classList.remove('error')
+        document.getElementById(`${element.target.id}ErrorMessage`).innerText = ""
+    }
+ }
+ 
+ const validate = (e) => {
+    switch(e.target.type) {
+        case "text":
+            checkLength(e)
             break;
-
-        case "keyup":
+        case "email":
+            checkEmail(e)
+            break;
+        case "textarea":
+            checkLength(e, 5)
             break;
     }
 }
